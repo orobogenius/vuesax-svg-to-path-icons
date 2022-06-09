@@ -1,0 +1,17 @@
+{
+    "name": "vuesax-svg-to-path",
+    "scripts": {
+        "build": "yarn optimize && node ./scripts/build.js",
+        "optimize": "yarn optimize-outline && yarn optimize-bold",
+        "build-outline": "node ./scripts/build.js outline",
+        "build-bold": "node ./scripts/build.js bold",
+        "optimize-outline": "rimraf ./optimized/outline && svgo --config=svgo.outline.js -f ./src/icons/outline -o ./optimized/outline --pretty --indent=2",
+        "optimize-bold": "rimraf ./optimized/bold && svgo --config=svgo.bold.js -f ./src/icons/bold -o ./optimized/bold --pretty --indent=2"
+    },
+    "dependencies": {
+        "jsdom": "^19.0.0",
+        "rimraf": "^3.0.2",
+        "svg-parser": "^2.0.4",
+        "svgo": "^2.8.0"
+    }
+}

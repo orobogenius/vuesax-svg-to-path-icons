@@ -1,0 +1,1 @@
+Convert [Vuesax](https://github.com/lusaxweb/iconsax) icon svgs to paths.
